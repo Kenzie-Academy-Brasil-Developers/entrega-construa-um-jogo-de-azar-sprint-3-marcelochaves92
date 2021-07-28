@@ -6,7 +6,7 @@ let computadorPontuacao = 0;
 function jogar(escolha){
     jogadorEscolha = escolha;
 
-    computadorEscolha = Math.floor((Math.randon() * (3-1 + 1))) + 1;
+    computadorEscolha = Math.floor((Math.random() * (3-1 + 1))) + 1;
 
     // 1- Pedra
     // 2- Papel
@@ -39,7 +39,8 @@ function jogar(escolha){
     else if((jogadorEscolha) === 3 && (computadorEscolha === 3)){
         ganhador = 0;
     }
-    document.getElementById("jogador-escolhar-" + jogadorEscolha).classList.remove('Selecionado');
+
+    document.getElementById("jogador-escolha-" + jogadorEscolha).classList.remove('Selecionado');
     document.getElementById("computador-escolha-" + computadorEscolha).classList.remove('Selecionado');
     document.getElementById("jogador-escolha-" + jogadorEscolha).classList.add('Selecionado');
     document.getElementById("computador-escolha-" + computadorEscolha).classList.add('Selecionado');
